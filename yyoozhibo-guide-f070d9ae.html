@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优直播 · 简明指南与访问说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf8f4;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #3a3530;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: 820px;
+            width: 100%;
+            background-color: #fffffffa;
+            border-radius: 40px 12px 40px 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+            padding: 2.8rem 2.2rem;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 2rem 1.2rem;
+                border-radius: 28px 8px 28px 8px;
+            }
+        }
+
+        /* 装饰分隔 */
+        hr {
+            border: none;
+            border-top: 1px solid #e6dfd6;
+            margin: 2.2rem 0;
+        }
+
+        .soft-hr {
+            border-top: 2px dotted #ddd6cb;
+            margin: 1.8rem 0;
+            opacity: 0.5;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+            color: #2b2621;
+            border-left: 4px solid #c7b7a4;
+            padding-left: 1rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7b7166;
+            margin-top: 0.1rem;
+            margin-bottom: 1.8rem;
+            font-style: italic;
+            padding-left: 1.1rem;
+            border-left: 2px solid #ddd6cb;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            color: #3e362f;
+            border-bottom: 1px solid #ede7df;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #4b4239;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* 引用块 / 提示框 */
+        .notice-box {
+            background-color: #f6f1ea;
+            border-left: 5px solid #c6b29c;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border-radius: 0 16px 16px 0;
+            font-size: 0.97rem;
+            color: #3e3730;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .notice-box strong {
+            color: #5c4d3c;
+        }
+
+        .tip-box {
+            background-color: #f3efe8;
+            border-left: 5px solid #b7aa9a;
+            padding: 1rem 1.6rem;
+            margin: 1.5rem 0;
+            border-radius: 0 14px 14px 0;
+            font-size: 0.96rem;
+            border-top: 1px solid #e5ddd2;
+            border-bottom: 1px solid #e5ddd2;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 1.2rem 0 1.8rem 0;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23b7a694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M9 12l2 2 4-4"/></svg>') left center no-repeat;
+            background-size: 1rem;
+            margin-bottom: 0.1rem;
+        }
+
+        a {
+            color: #8a765d;
+            text-decoration: none;
+            border-bottom: 1px solid #dacfc2;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #5c4b36;
+            border-bottom-color: #8a765d;
+        }
+
+        .faq-item {
+            margin: 1.4rem 0 1rem 0;
+        }
+
+        .faq-item p:first-child {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #4e443b;
+        }
+
+        .faq-item p:last-child {
+            margin-left: 0.5rem;
+            color: #5b5248;
+            border-left: 2px solid #e2d9cd;
+            padding-left: 1rem;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            color: #8a7d70;
+            text-align: center;
+            border-top: 1px solid #eae2d8;
+            padding-top: 1.8rem;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-note a {
+            border-bottom: 1px dotted #cbbdac;
+        }
+
+        .sig {
+            display: inline-block;
+            background: #f2ece4;
+            padding: 0.15rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #6b6054;
+            margin-top: 0.5rem;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.7rem;
+            }
+            .page {
+                padding: 1.6rem 1rem;
+            }
+            .notice-box, .tip-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>优直播</h1>
+    <div class="subhead">一份简明指南 · 关于使用与访问的温和提醒</div>
+
+    <p>从最初的试看，到逐渐习惯用直播来获取资讯或陪伴，很多人都会遇到同一个问题：到底该从哪里开始？<strong>优直播</strong>所希望提供的，是一处不那么喧闹的观看角落——不需要被复杂的推荐算法推着走，也不必在过多的弹窗中做选择。下面这份简短的说明，或许能帮你更快地了解它的基本面貌。</p>
+
+    <!-- 摘要区 -->
+    <div class="notice-box">
+        <strong>▎摘要</strong><br>
+        简单来说，<a href="https://yyoozhibo.com">优直播</a>是一个聚合了多个频道与直播内容的页面。它没有刻意包装成“平台”或者“社区”，更接近一个整理好的目录索引，让你可以按兴趣找到正在播放的直播信号。界面以实用为主，没有过多的社交功能或会员体系。
+    </div>
+
+    <h2>亮点与特点</h2>
+    <ul class="highlight-list">
+        <li><strong>频道归类清晰</strong> — 内容按照常见类别排列，省去反复搜索的时间。</li>
+        <li><strong>无需注册即可浏览</strong> — 大部分直播内容可以直接观看，不需要绑定手机或邮箱。</li>
+        <li><strong>加载速度尚可</strong> — 页面结构相对轻量，在普通网络条件下也能较快打开。</li>
+        <li><strong>无强制推送</strong> — 没有自动全屏广告或强制下载App的提示，观看体验比较干净。</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>💡 使用建议</strong><br>
+        如果你只是想安静地看一会直播，不希望在观看过程中被频繁打断，那么可以先把<a href="https://yyoozhibo.com">优直播</a>加入书签。它特别适合在电脑浏览器上使用——当然在手机上也完全可看，只是部分列表可能需要横向滑动。建议使用较新版本的Chrome、Edge或Safari，兼容性会更好。
+    </div>
+
+    <h2>适合的场景</h2>
+    <p>工作间隙，做饭时，或者睡前的片刻放松——这些时候打开一个直播频道，既不会像短视频那样让人停不下来，又比纯文字多了一点现场感。如果你对某个赛事、演出或资讯频道有固定偏好，通过<strong>优直播</strong>可以快速定位，而不需要在搜索引擎里重新翻找。</p>
+    <p>另外，对于不太熟悉直播网站的长辈或初学者，这个页面的结构也比较友好：没有复杂的注册引导，也没有隐藏的付费陷阱。你可以直接告诉他们“从这里选一个想看的就行”。</p>
+
+    <div class="soft-hr"></div>
+
+    <h2>可信但克制的访问说明</h2>
+    <p>需要坦诚地说明一点：任何直播类页面都可能遇到源失效、频道更替或临时维护的情况。<a href="https://yyoozhibo.com">优直播</a>本身是一个导航性质的内容页，它不生产直播流，也不存储视频文件。因此，如果你点进去发现某个频道暂时黑屏或加载缓慢，大概率是源端的问题，可以稍后再试，或者切换到同类其他频道。</p>
+
+    <div class="notice-box">
+        <strong>📌 访问提醒</strong><br>
+        • 建议在Wi-Fi环境下观看高清频道，移动数据下可能消耗较多流量。<br>
+        • 部分直播源可能包含地域限制，如果无法播放可以尝试切换线路。<br>
+        • 请勿将直播内容用于商业转播或录制传播，尊重原始版权。<br>
+        • 如果页面出现异常弹窗或跳转，请及时关闭，保持浏览器安全设置。
+    </div>
+
+    <h2>常见疑问（FAQ 摘要）</h2>
+
+    <div class="faq-item">
+        <p>Q: 需要下载App或插件吗？</p>
+        <p>A: 不需要。直接在浏览器中打开即可观看，无需安装任何额外软件。部分频道可能依赖Flash或特定播放器，但现代浏览器大多已内置支持。</p>
+    </div>
+    <div class="faq-item">
+        <p>Q: 为什么有些频道只有声音没有画面？</p>
+        <p>A: 这通常与视频编码格式有关，可以尝试刷新页面或切换另一个同类频道。极少数情况下需要关闭浏览器的“硬件加速”选项。</p>
+    </div>
+    <div class="faq-item">
+        <p>Q: 页面上的频道列表会更新吗？</p>
+        <p>A: 会不定期整理和替换失效的链接，但并非实时更新。如果你发现某个频道长期无法使用，可以暂时忽略，使用其他可用的源。</p>
+    </div>
+    <div class="faq-item">
+        <p>Q: 这个页面是完全免费的吗？</p>
+        <p>A: 是的，访问优直播不需要付费，页面本身也没有任何收费项目。但请注意，个别第三方直播源可能会在播放器中嵌入自己的广告，这与本站无关。</p>
+    </div>
+
+    <hr>
+
+    <p style="font-size: 0.96rem; color: #60574b;">最后想说：直播是一种陪伴，但别忘了适时休息。希望你能在<a href="https://yyoozhibo.com">优直播</a>找到自己喜欢的频道，并且用得轻松、简单。如果你觉得这个页面有帮助，不妨分享给朋友，但不必刻意宣传——好的工具，自然会被需要的人发现。</p>
+
+    <div class="footer-note">
+        <span class="sig">▍ 优直播 · 简明索引</span><br>
+        <span style="font-size:0.8rem; color:#a69a8b;">内容仅供参考，实际体验可能因网络和设备而异</span>
+    </div>
+
+</div>
+</body>
+</html>
